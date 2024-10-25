@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tag Verifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Tag Verifier</h1>
+        <form id="upload-form" enctype="multipart/form-data">
+            <label for="htmlfile" class="file-upload-label">Choose HTML File</label>
+            <input type="file" id="htmlfile" name="htmlfile" accept=".html">
+            <button type="submit">Verify Tags</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
